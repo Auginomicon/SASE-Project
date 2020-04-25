@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="report.js" type="text/javascript"> </script>
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Report</title>
+</head>
+<body>
+    <center>
+    <div class="header-image">
+        <br>
+        <h1 class="header">Daily Construction Report</h1>
+        <br><br>
+        <p class="photo-text-custom" style="color:white"> Ferguson Contractors <small>Since 1925</small></p>
+        <br><br><br><br><br><br><br><br>
+    </div>
+    <form action="recorddata.php" method="post">
+    
+    <p class="question">Project * </p>
+    <div>
+        <select name="project_menu" onchange="setProject()" class= "select-css">
+            <option value="0" selected>select</option>
+            <option value='joe'>joe</option>
+            <option value="2">two</option>
+            <option value="3">three</option>
+        </select>
+
+    <script>
+        var proj;
+        function setProject(){
+            proj = document.getElementById('project_menu').value;
+        }
+    </script>
+
+    <p class="question">Project Manager</p>
+    <div>
+        <select name="manager_menu" onchange="setManager()" class= "select-css">
+            <option value="0" selected>select</option>
+            <option value="one">one</option>
+            <option value="two">two</option>
+            <option value="three">three</option>
+        </select>
+    </div>
+    <script>
+        var mang;
+        function setManager(){
+            mang = document.getElementById('manager_menu').value;
+        }
+    </script>
+    
+    <p class="question">Foreman</p>
+    <div>
+        <select name="foreman_menu" onchange="setForeman()" class= "select-css">
+            <option value="0" selected>select</option>
+            <option value="one">one</option>
+            <option value="two">two</option>
+            <option value="three">three</option>
+        </select>
+    </div>
+    <script>
+        var fore;
+        function setForeman(){
+            fore = document.getElementById('foreman_menu').value;
+        }
+    </script>
+
+    <p class="question">Temperature</p>
+    <div>
+        <select name="tempurature_menu" onchange="setTemp()" class= "select-css">
+            <option value="0" selected>select</option>
+            <option value="one">one</option>
+            <option value="two">two</option>
+            <option value="three">three</option>
+        </select>
+    </div>
+    <script>
+        var temp;
+        function setTemp(){
+            temp = document.getElementById('tempurature_menu').value;
+        }
+
+    </script>
+
+    <p class="question">Weather</p>
+    <div>
+        <select name="weather_menu" onchange="var weather = getSelectedOptions(this)" class= "select-css">
+            <option value="0" selected>select</option>
+            <option value="one">one</option>
+            <option value="two">two</option>
+            <option value="three">three</option>
+        </select>
+    </div>
+
+    <p class="question">Floor</p>
+    <div>
+        <select name="floor_menu" onchange= "setFloor()" class= "select-css">
+            <option value="0" selected>select</option>
+            <option value="one">one</option>
+            <option value="two">two</option>
+            <option value="three">three</option>
+        </select>
+    </div>
+    <script>
+        var floor;
+        function setFloor(){
+            floor = document.getElementById('floor_menu').value;
+        }
+    </script>
+
+    <p class="question">Rooms</p>
+    <div>
+        <select name="rooms_menu" onchange="var rooms = getSelectedOptions(this)" class= "select-css">
+            <option value="0" selected>select</option>
+            <option value="one">one</option>
+            <option value="two">two</option>
+            <option value="three">three</option>
+        </select>
+    </div>
+
+    <p class="question">Work Performing</p>
+    <div>
+        <select name="work_performing_menu" onchange="var wp = getSelectedOptions(this)" name="D1" class= "select-css">
+            <option value="0" selected>select</option>
+            <option value="one">one</option>
+            <option value="two">two</option>
+            <option value="three">three</option>
+        </select>
+    </div>
+
+    <p class="question">Who Caused Impact</p>
+    <div>
+        <select name="who_caused_impact_menu" onchange="var wci = getSelectedOptions(this)" class= "select-css">
+            <option value="0" selected>select</option>
+            <option value="one">one</option>
+            <option value="two">two</option>
+            <option value="three">three</option>
+        </select>
+    </div>
+
+    <p class="question">Pick Impact that apply </p>
+    <div>
+        <select name="pick_impacts_that_apply_menu" onchange="var pita = getSelectedOptions(this)" class= "select-css">
+            <option value="0" selected>select</option>
+            <option value="one">one</option>
+            <option value="two">two</option>
+            <option value="three">joe</option>
+        </select>
+    </div>
+
+    <p class="question">Comment Box here</p>
+    <textarea class = "textarea-custom">
+    </textarea>
+
+    <p class="question">Major Equipment Impacted</p>
+    <div>
+        <select name="major_equipement_impacted_menu" onchange="var mei = getSelectedOptions(this)" class= "select-css">
+            <option value="0" selected>select</option>
+            <option value="one">one</option>
+            <option value="two">two</option>
+            <option value="three">three</option>
+        </select>
+    </div>
+
+    <p class="question">What did you do? </p>
+    <select name="what_did_you_do_menu" onchange="var wdyd = getSelectedOptions(this)" class= "select-css">
+        <option value="0" selected>select</option>
+        <option value="one">one</option>
+        <option value="two">two</option>
+        <option value="three">three</option>
+    </select>
+
+    <p class="question">Men</p>
+    <div>
+        <select name="men_menu" onchange="setMen()" class= "select-css">
+            <option value="0" selected>select</option>
+            <option value="one">one</option>
+            <option value="two">two</option>
+            <option value="three">three</option>
+        </select>
+    </div>
+
+    <p></p>
+    <p class="question">Hours</p>
+    <div>
+        <select name="hours_menu" class= "select-css">
+            <option value="0" selected>select</option>
+            <option value="one">one</option>
+            <option value="two">two</option>
+            <option value="three">three</option>
+        </select>
+    </div>
+
+    <p><br></p>
+    <form action ="/php here">
+        <label for="img" class="photo-text-custom">Select Image if needed:</label>
+        <input type="file" id="img"name="img" accept="image/*"></input>
+    </form>
+
+    <p class="question">Signature here</p>
+    <p>
+        <input type="text" name="inputfield">
+        <button id="submitbutton" class ="button-custom">Submit</button>
+    </p>
+    </center>
+</body>
+
+<script>
+    function getSelectedOptions(sel){
+        var opts = [], opt;
+        var len = sel.options.length;
+        for (var i = 0; i < len; i++) {
+            opt = sel.options[i];
+
+            if (opt.selected) {
+                 opts.push(opt);
+                //alert(opt.value);
+            }
+        }
+        return opts;
+    }
+</script>
+</html>

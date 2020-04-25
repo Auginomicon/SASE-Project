@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html>
+<body>
+<title>Signup</title>
+<link rel="stylesheet" type="text/css" href="stylesheet.css">
+<div class="header-image">
+	<center>
+		<br>
+		<h1 class="header">Sign Up Form</h1>
+		<br><br>
+		<p class="photo-text-custom" style="color:white"> Ferguson Contractors <small>Since 1925</small></p>
+		<br><br><br><br><br><br><br><br>
+	</center>
+</div>
+<form action="insertnewrecord.php" method="post">
+    <p class="login-text-custom">Username: </p>
+    <input name="username" class="login-inputbox-custom" placeholder="Your username..." style="width: 195px" type="text"><br>
+
+    <p class="login-text-custom">Password: </p>
+    <input name="password" class="login-inputbox-custom" placeholder="Your password..." style="width: 195px" type="password"><br><br>
+
+    <p class="login-text-custom">First Name: </p>
+    <input type="text" class="login-inputbox-custom" placeholder="First Name..." style="width: 195px" name="firstname">
+
+    <p class="login-text-custom">Last Name: </p>
+    <input type="text" class="login-inputbox-custom" placeholder="Last Name..." style="width: 195px" name="lastname">
+
+    <p class="login-text-custom">Email: </p>
+    <input type="text" class="login-inputbox-custom" placeholder="Your Email..." style="width: 195px" name="Email">
+
+    <p class="login-text-custom">Date: </p>
+    <input type="date" class="login-inputbox-custom" id="start" name="trip-start" style="width: 195px" value="2019-03-13" min="2018-01-01" max="2020-12-31">
+
+    <p></p>
+    <input type="submit" class="button-custom" value="Sign Up">
+</form>
+<p>&nbsp;</p>
+</body>
+</html>

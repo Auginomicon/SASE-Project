@@ -6,6 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
     <title>Report</title>
 </head>
 <body>
@@ -14,18 +15,20 @@
         <br>
         <h1 class="header">Daily Construction Report</h1>
         <br><br>
-        <p class="photo-text-custom" style="color:white"> Ferguson Contractors <small>Since 1925</small></p>
+        <p class="photo-text-custom" style="color:white"> Constuction Company</p>
         <br><br><br><br><br><br><br><br>
     </div>
     <form action="recorddata.php" method="post">
-    
+
     <p class="question">Project * </p>
     <div>
         <select name="project_menu" onchange="setProject()" class= "select-css">
-            <option value="0" selected>select</option>
-            <option value='joe'>joe</option>
-            <option value="2">two</option>
-            <option value="3">three</option>
+            <option value="" disabled selected hidden> Projects...</option>
+            <option value='School_Building'> School Building</option>
+            <option value="Office_Building"> Office Building</option>
+            <option value="Area_51">Area 51</option>
+            <option value="Hospital_Renovations">Hospital Renovations</option>
+            <option value="Museum_Extension">Museum Extension</option>
         </select>
 
     <script>
@@ -38,10 +41,11 @@
     <p class="question">Project Manager</p>
     <div>
         <select name="manager_menu" onchange="setManager()" class= "select-css">
-            <option value="0" selected>select</option>
-            <option value="one">one</option>
-            <option value="two">two</option>
-            <option value="three">three</option>
+            <option value="" disabled selected hidden>Project Managers...</option>
+            <option value="Erik_Vaughn">Erik Vaughn</option>
+            <option value="Malik_Patel">Malik Patel</option>
+            <option value="Obama">Obama</option>
+            <option value="Jon_Colombo">Jon Colombo</option>
         </select>
     </div>
     <script>
@@ -54,10 +58,11 @@
     <p class="question">Foreman</p>
     <div>
         <select name="foreman_menu" onchange="setForeman()" class= "select-css">
-            <option value="0" selected>select</option>
-            <option value="one">one</option>
-            <option value="two">two</option>
-            <option value="three">three</option>
+            <option value="" disabled selected hidden>Foreman...</option>
+            <option value="Vincent_Donatello">Vincent Donatello</option>
+            <option value="Mathew_Lopez">Mathew Lopez</option>
+            <option value="Chris_Boyer">Chris Boyer</option>
+            <option value="Wilson_Collin">Wilson Collin</option>
         </select>
     </div>
     <script>
@@ -70,10 +75,15 @@
     <p class="question">Temperature</p>
     <div>
         <select name="tempurature_menu" onchange="setTemp()" class= "select-css">
-            <option value="0" selected>select</option>
-            <option value="one">one</option>
-            <option value="two">two</option>
-            <option value="three">three</option>
+            <option value="0" disabled selected hidden>Temperature...</option>
+            <option value="-10_to_0">-10 to 0</option>
+            <option value="0_to_15">0 to 15</option>
+            <option value="15_to_30">15 to 30</option>
+            <option value="30_to_45">30 to 45</option>
+            <option value="45_to_60">45 to 60</option>
+            <option value="60_to_75">60 to 75</option>
+            <option value="75_to_90">75 to 90</option>
+            <option value="90_to_105">90 to 105</option>
         </select>
     </div>
     <script>
@@ -81,26 +91,35 @@
         function setTemp(){
             temp = document.getElementById('tempurature_menu').value;
         }
-
     </script>
 
     <p class="question">Weather</p>
     <div>
-        <select name="weather_menu" onchange="var weather = getSelectedOptions(this)" class= "select-css">
-            <option value="0" selected>select</option>
-            <option value="one">one</option>
-            <option value="two">two</option>
-            <option value="three">three</option>
+        <select name="weather_menu" onchange="var weather = getSelectedOptions(this)" class= "select-css" >
+            <option value="" hidden selected disabled>Weather...</option>
+            <option value="Ice">Ice</option>
+            <option value="Sleet">Sleet</option>
+            <option value="Snow">Snow</option>
+            <option value="Rain">Rain</option>
+            <option value="Partly_Cloudy">Partly Cloudy</option>
+            <option value="Sunny">Sunny</option>
         </select>
     </div>
 
     <p class="question">Floor</p>
     <div>
         <select name="floor_menu" onchange= "setFloor()" class= "select-css">
-            <option value="0" selected>select</option>
-            <option value="one">one</option>
-            <option value="two">two</option>
-            <option value="three">three</option>
+            <option value="" disabled hidden selected>Floor...</option>
+            <option value="Site_Work">Site Work</option>
+            <option value="Underground">Underground</option>
+            <option value="Basement">Basement</option>
+            <option value="First_Floor">First Floor</option>
+            <option value="Second_Floor">Second Floor</option>
+            <option value="Third_Floor">Third Floor</option>
+            <option value="Roof_Top">Roof Top</option>
+            <option value="Low_Roof">Low Roof</option>
+            <option value="High_Roof">High Roof</option>
+            <option value="Penthouse">Penthouse</option>
         </select>
     </div>
     <script>
@@ -113,72 +132,111 @@
     <p class="question">Rooms</p>
     <div>
         <select name="rooms_menu" onchange="var rooms = getSelectedOptions(this)" class= "select-css">
-            <option value="0" selected>select</option>
-            <option value="one">one</option>
-            <option value="two">two</option>
-            <option value="three">three</option>
+            <option value="" hidden disabled selected>Room...</option>
+            <option value="Administration">Administration</option>
+            <option value="Auditorium">Auditorium</option>
+            <option value="Cafeteria">Cafeteria</option>
+            <option value="Classroom">Classroom</option>
+            <option value="Corridor">Corridor</option>
+            <option value="Data_Closet">Data Closet</option>
+            <option value="Electrical_Room">Electrical Room</option>
+            <option value="Gym">Gym</option>
+            <option value="Mechanical_Room">Mechanical Room</option>
+            <option value="Other">Other</option>
         </select>
     </div>
 
     <p class="question">Work Performing</p>
     <div>
         <select name="work_performing_menu" onchange="var wp = getSelectedOptions(this)" name="D1" class= "select-css">
-            <option value="0" selected>select</option>
-            <option value="one">one</option>
-            <option value="two">two</option>
-            <option value="three">three</option>
+            <option value=""hidden disabled selected>Work Performed...</option>
+            <option value="Layout/Survery/Trimble">Layout/Survery/Trimble</option>
+            <option value="Hangars/Supports">Hangars/Supports</option>
+            <option value="Seismic">Seismic</option>
+            <option value="UG_Feeder">UG Feeder</option>
+            <option value="UG_Branch">UG Branch</option>
+            <option value="Panels">Panels</option>
+            <option value="Fixtures">Fixtures</option>
+            <option value="System_Devices">System Devices</option>
+            <option value="Lighting_Poles/Heads/Terms">Lighting Poles/Heads/Terms</option>
+            <option value="Site_Lighting_Bases">Site Lighting Bases</option>
         </select>
     </div>
 
     <p class="question">Who Caused Impact</p>
     <div>
         <select name="who_caused_impact_menu" onchange="var wci = getSelectedOptions(this)" class= "select-css">
-            <option value="0" selected>select</option>
-            <option value="one">one</option>
-            <option value="two">two</option>
-            <option value="three">three</option>
+            <option value="" disabled hidden selected>People Impacted..?</option>
+            <option value="Agency/Owner">Agency/Owner</option>
+            <option value="User">User</option>
+            <option value="Architect">Architect</option>
+            <option value="Engineer">Engineer</option>
+            <option value="Gneral_Contractor">Gneral Contractor</option>
+            <option value="None">None</option>
+            <option value="Other">Other</option>
         </select>
     </div>
 
     <p class="question">Pick Impact that apply </p>
     <div>
         <select name="pick_impacts_that_apply_menu" onchange="var pita = getSelectedOptions(this)" class= "select-css">
-            <option value="0" selected>select</option>
-            <option value="one">one</option>
-            <option value="two">two</option>
-            <option value="three">joe</option>
+            <option value="" disabled hidden selected>Impact Type...</option>
+            <option value="No_Power/Heat/Water">No Power/Heat/Water</option>
+            <option value="Access_Blocked">Access Blocked</option>
+            <option value="Saftey_Systems_Not_Complete">Saftey Systems Not Complete</option>
+            <option value="Work_Removed/Damaged">Work Removed/Damaged</option>
+            <option value="Stockpile_Damage/Theft">Stockpile_Damage/Theft</option>
+            <option value="No_Protection_From_Weather">No Protection From Weather"</option>
+            <option value="Working_Without_Coordination">Working Without Coordination</option>
+            <option value="None">None</option>
+            <option value="Other">Other</option>
         </select>
     </div>
-
-    <p class="question">Comment Box here</p>
-    <textarea class = "textarea-custom">
-    </textarea>
 
     <p class="question">Major Equipment Impacted</p>
     <div>
         <select name="major_equipement_impacted_menu" onchange="var mei = getSelectedOptions(this)" class= "select-css">
-            <option value="0" selected>select</option>
-            <option value="one">one</option>
-            <option value="two">two</option>
-            <option value="three">three</option>
+            <option value="" hidden disabled selected>Equipment Impacted...</option>
+            <option value="Pickup_Truck">Pickup Truck</option>
+            <option value="Stake_Body">Stake_Body</option>
+            <option value="Manlift">Manlift</option>
+            <option value="Lull">Lull</option>
+            <option value="Hydraulic_Bender">Hydraulic Bender</option>
+            <option value="Threader_Large">Threader Large</option>
+            <option value="Threader_Medium">Threader_Medium</option>
+            <option value="Core_Borer">Core Borer</option>
+            <option value="Gang_Box">Gang Box</option>
+            <option value="None">None</option>
+            <option value="Other">Other</option>
         </select>
     </div>
 
     <p class="question">What did you do? </p>
     <select name="what_did_you_do_menu" onchange="var wdyd = getSelectedOptions(this)" class= "select-css">
-        <option value="0" selected>select</option>
-        <option value="one">one</option>
-        <option value="two">two</option>
-        <option value="three">three</option>
+        <option value="" disabled hidden selected>Tasks you did..?</option>
+        <option value="Waited_for_directions">Waited for Directions</option>
+        <option value="Demobilized">Demobilized</option>
+        <option value="Completed_Available_Work">Completed Available Work</option>
+        <option value="Reduce_Crew">Reduce Crew</option>
+        <option value="Repair">Repair</option>
+        <option value="Report_Issue">Report Issue</option>
+        <option value="Other">Other</option>
     </select>
 
     <p class="question">Men</p>
     <div>
         <select name="men_menu" onchange="setMen()" class= "select-css">
-            <option value="0" selected>select</option>
-            <option value="one">one</option>
-            <option value="two">two</option>
-            <option value="three">three</option>
+            <option value="" disabled hidden selected>How many?</option>
+            <option value="one">1</option>
+            <option value="two">2</option>
+            <option value="three">3</option>
+            <option value="four">4</option>
+            <option value="five">5</option>
+            <option value="six">6</option>
+            <option value="seven">7</option>
+            <option value="eight">8</option>
+            <option value="nine">9</option>
+            <option value="10">10</option>
         </select>
     </div>
 
@@ -186,18 +244,24 @@
     <p class="question">Hours</p>
     <div>
         <select name="hours_menu" class= "select-css">
-            <option value="0" selected>select</option>
-            <option value="one">one</option>
-            <option value="two">two</option>
-            <option value="three">three</option>
+            <option value="" disabled hidden selected>How many?</option>
+            <option value="one">1</option>
+            <option value="two">2</option>
+            <option value="three">3</option>
+            <option value="four">4</option>
+            <option value="five">5</option>
+            <option value="six">6</option>
+            <option value="seven">7</option>
+            <option value="eight">8</option>
+            <option value="nine">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+            <option value="13">13</option>
+            <option value="14">14</option>
+            <option value="15">15</option>
         </select>
     </div>
-
-    <p><br></p>
-    <form action ="/php here">
-        <label for="img" class="photo-text-custom">Select Image if needed:</label>
-        <input type="file" id="img"name="img" accept="image/*"></input>
-    </form>
 
     <p class="question">Signature here</p>
     <p>
